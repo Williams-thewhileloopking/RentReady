@@ -23,7 +23,7 @@ def create_tenant_agreement_docx(template_path, output_path, placeholders):
                 paragraph.text = paragraph.text.replace(f'{{{key}}}', str(value))
 
     # Save the modified document
-    doc.save(output_path)
+    doc.save(OUTPUT_DOCX_PATH)
 
 @app.route('/generate-agreement', methods=['POST'])
 def generate_agreement():
